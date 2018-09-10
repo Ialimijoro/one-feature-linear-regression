@@ -1,2 +1,2 @@
-# one-feature-linear-regression
-Implement gradient descent for one feature data sets
+# One feature gradient descent algorith
+Implement gradient descent for one feature data sets with Python
