@@ -1,2 +1,2 @@
 # One feature gradient descent algorithm
-Implement gradient descent for one feature data sets with Python
+Predict the height(cm) based on the weigh(kg) using the gradient descent algorithm
