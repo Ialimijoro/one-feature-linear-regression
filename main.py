@@ -14,8 +14,8 @@ def step_gradient_descent(data) :
   
   for i in range(0, iterations):
     height_predicted = (teta_1 * weigh) + teta_0 
-    teta_0_d = (1/N)*sum(height_predicted - height) 
-    teta_1_d = (1/N)*sum(weigh*(height_predicted - height))
+    teta_0_d = (1/N) * sum(height_predicted - height) 
+    teta_1_d = (1/N) * sum(weigh*(height_predicted - height))
     cost_error = (1/(2*N)) * sum([val**2 for val in (height_predicted - height)])
    
     teta_0 = teta_0 - learning_rate * teta_0_d
