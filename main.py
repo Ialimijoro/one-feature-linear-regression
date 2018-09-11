@@ -5,12 +5,12 @@ def step_gradient_descent(data) :
   weigh = np.array(data.weigh)
   height = np.array(data.height)
 
-  learning_rate = 0.00042
+  learning_rate = 0.00039
   teta_0 = 0
   teta_1 = 0
   N = len(weigh)
   cost_error = []
-  iterations = 10000
+  iterations = 300000
   
   for i in range(0, iterations):
     height_predicted = (teta_1 * weigh) + teta_0 
@@ -20,6 +20,7 @@ def step_gradient_descent(data) :
    
     teta_0 = teta_0 - learning_rate * teta_0_d
     teta_1 = teta_1 - learning_rate * teta_1_d
+    # print('cost_error {}'.format(cost_error))
 
   return {
     'teta_0': teta_0,
@@ -35,8 +36,9 @@ def predict(data, weigh) :
 
 def run() :
   data = pd.read_csv('data.csv')
-  weigh = 64
-  print("A {}kg person should be {}cm".format(weigh,predict(data, weigh) ))
+  weigh = 72
+  
+  print("A {}kg person should be around {}cm".format(weigh,predict(data, weigh) ))
 
 if __name__ == '__main__':
   run()
